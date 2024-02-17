@@ -124,4 +124,11 @@ public class PlayerBehaviour : MonoBehaviour
         return grounded;
     }
 
+    void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.name== "Enemy")
+        {
+            _gameManager.HP -= 25;
+        }
+    }
 }
